@@ -10,6 +10,7 @@ namespace Poligon2026_3_10_A
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("b2++");
         }
     }
 }
