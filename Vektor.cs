@@ -8,8 +8,8 @@ namespace Poligon2026_3_10_A
 {
     class Vektor
     {
-        tacka pocetak;
-        tacka kraj;
+        public tacka pocetak;
+        public tacka kraj;
         public Vektor(tacka a,tacka b)
         {
             pocetak =  a;
@@ -28,17 +28,17 @@ namespace Poligon2026_3_10_A
             double y = kraj.y - pocetak.y;
             return new tacka(x, y);
         }
-        public double SP(Vektor a,Vektor b)
+       static public double SP(Vektor a,Vektor b)
         {
             tacka A = a.centriraj();
             tacka B = b.centriraj();
             return A.x * B.x + A.y * B.y;
         }
-        public double VP(Vektor a,Vektor b)
+       static public double VP(Vektor a,Vektor b)
         {
             tacka A = a.centriraj();
             tacka B = b.centriraj();
-            double k = A.x * B.x - A.y * B.y;
+            double k = A.x * B.y - A.y * B.x;
             return k;
         }
     }
