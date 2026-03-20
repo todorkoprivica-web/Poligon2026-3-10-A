@@ -30,6 +30,7 @@ namespace Poligon2026_3_10_A
             int n = Convert.ToInt32(Console.ReadLine());
             poligon prvi = new poligon(n);
             prvi.unos();
+            prvi.stampaj();
         }
     }
 }

@@ -33,9 +33,10 @@ namespace Poligon2026_3_10_A
             Console.WriteLine("Poligon od " + br_temena + "tacaka");
             for (int i = 0; i < br_temena; i++)
             {
-                Console.WriteLine("A({0})"+"("+teme[i].x+","+teme[i].y+")",i+1);
+                Console.WriteLine("A{0}"+"("+teme[i].x+","+teme[i].y+")",i+1);
             }
         }
+
 
     }
 }
