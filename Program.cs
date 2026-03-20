@@ -26,6 +26,10 @@ namespace Poligon2026_3_10_A
             tacka B = new tacka(3, 2);
             tacka C = new tacka(2, 3);
             tacka D = new tacka(2, 2);
+            Console.WriteLine("Kolko temena?");
+            int n = Convert.ToInt32(Console.ReadLine());
+            poligon prvi = new poligon(n);
+            prvi.unos();
         }
     }
 }
