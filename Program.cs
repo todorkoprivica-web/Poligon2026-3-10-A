@@ -22,15 +22,18 @@ namespace Poligon2026_3_10_A
             Console.WriteLine(Vektor.SP(OA, OB));
             Console.WriteLine(Vektor.VP(OA, AC));
             */
-            tacka A = new tacka(1, 2);
-            tacka B = new tacka(3, 2);
-            tacka C = new tacka(2, 3);
-            tacka D = new tacka(2, 2);
-            Console.WriteLine("Kolko temena?");
-            int n = Convert.ToInt32(Console.ReadLine());
-            poligon prvi = new poligon(n);
-            prvi.unos();
-            prvi.stampaj();
+            //tacka A = new tacka(1, 2);
+           // tacka B = new tacka(3, 2);
+           // tacka C = new tacka(2, 3);
+            //tacka D = new tacka(2, 2);
+           // Console.WriteLine("Kolko temena?");
+            //int n = Convert.ToInt32(Console.ReadLine());
+           // poligon prvi = new poligon(n);
+           // prvi.unos();
+            //prvi.stampaj();
+            //prvi.snimi();
+            poligon drugi = poligon.ucitaj();
+            drugi.stampaj();
         }
     }
 }
