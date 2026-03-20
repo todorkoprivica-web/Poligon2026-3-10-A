@@ -41,5 +41,10 @@ namespace Poligon2026_3_10_A
             double k = A.x * B.y - A.y * B.x;
             return k;
         }
+        public double duzina()
+        {
+            tacka finalna = this.centriraj();
+            return finalna.d();
+        }
     }
 }

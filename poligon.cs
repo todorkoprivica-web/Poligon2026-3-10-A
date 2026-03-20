@@ -9,8 +9,9 @@ namespace Poligon2026_3_10_A
 {
     class poligon
     {
-         int br_temena;
-         tacka[] teme;
+        int br_temena;
+        tacka[] teme;
+
        public poligon(int n)
         {
             br_temena = n;
@@ -60,6 +61,20 @@ namespace Poligon2026_3_10_A
             }
             ulaz.Close();
             return novi;
+        }
+        public Vektor[] stranice()
+        {
+            Vektor[] str = new Vektor[br_temena];
+            for(int i = 0; i < br_temena-1; i++)
+            {
+                str[i] = new Vektor(teme[i], teme[i + 1]);
+                str[br_temena] = new Vektor(teme[br_temena],teme[0]);
+            }
+            return str;
+        }
+        public double obim() 
+        {
+
         }
 
     }
