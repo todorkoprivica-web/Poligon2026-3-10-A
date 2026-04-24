@@ -114,5 +114,17 @@ namespace poligon_2026_3_10_a
             if (presek) return false;
             else return true;
         }
+        public bool konveksan()
+        {
+            vektor[] str = stranice();
+            int t = 0;
+            for(int i = 0; i < br_temena; i++)
+            {
+                double ugao = vektor.VP(str[i], str[i + 1]);
+                if (ugao > 0) t++;
+            }
+            if ((t == br_temena) || (t == 0))  return true; 
+            else return false;
+        }
     }
 }
