@@ -4,23 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Poligon2026_3_10_A
+namespace poligon_2026_3_10_a
 {
-    class Vektor
+    internal class vektor
     {
         public tacka pocetak;
         public tacka kraj;
-        public Vektor(tacka a,tacka b)
+        public vektor(tacka A, tacka B)
         {
-            pocetak =  a;
-            kraj = b;
-
+            pocetak = A;
+            kraj = B;
         }
-        public Vektor(tacka a)
+        public vektor(tacka A)
         {
             tacka poc = new tacka();
             pocetak = poc;
-            kraj = a;
+            kraj = A;
         }
         public tacka centriraj()
         {
@@ -28,13 +27,13 @@ namespace Poligon2026_3_10_A
             double y = kraj.y - pocetak.y;
             return new tacka(x, y);
         }
-       static public double SP(Vektor a,Vektor b)
+        static public double SP(vektor a, vektor b)
         {
             tacka A = a.centriraj();
             tacka B = b.centriraj();
             return A.x * B.x + A.y * B.y;
         }
-       static public double VP(Vektor a,Vektor b)
+        static public double VP(vektor a, vektor b)
         {
             tacka A = a.centriraj();
             tacka B = b.centriraj();
@@ -45,6 +44,18 @@ namespace Poligon2026_3_10_A
         {
             tacka finalna = this.centriraj();
             return finalna.d();
+        }
+        static public bool seku_se(vektor a, vektor b)
+        {
+            int a_b = ravan.SIS(a, b.pocetak, b.kraj);
+            Console.WriteLine("a b" + a_b.ToString());
+            int b_a = ravan.SIS(b, a.pocetak, a.kraj);
+            Console.WriteLine("b a" + b_a.ToString());
+            if (a_b * b_a != 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

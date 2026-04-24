@@ -4,20 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Poligon2026_3_10_A
+namespace poligon_2026_3_10_a
 {
-    class tacka
+    internal class tacka
     {
         public double x, y;
-        public tacka(double a,double b)
+        public tacka(double a, double b)
         {
             x = a;
             y = b;
         }
         public tacka()
         {
-            x = 0;
-            y = 0;
+            x = 0; y = 0;
         }
         public double d()
         {
@@ -26,7 +25,15 @@ namespace Poligon2026_3_10_A
         }
         public double ugao()
         {
-            return Math.Atan2(x, y)*180/Math.PI;
+            return Math.Atan2(y, x) * 180 / Math.PI;
+        }
+        public static bool jednake(tacka A, tacka B)
+        {
+            if ((A.x == B.x) && (A.y == B.y))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
